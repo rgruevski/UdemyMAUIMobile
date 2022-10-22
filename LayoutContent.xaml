@@ -4,15 +4,18 @@
              x:Class="UdemyMAUIMobile.LayoutContent"
              xmlns:myFontSize="clr-namespace:UdemyMAUIMobile"
              xmlns:hOptions="clr-namespace:UdemyMAUIMobile"
+             xmlns:resources="clr-namespace:UdemyMAUIMobile.Resources"
              Title="LayoutContent">
     
     <VerticalStackLayout 
         x:Name="VStackLayout" 
-        Padding="{OnPlatform iOS='30,10,30,10', Default='30'}">
+        Padding="{OnPlatform iOS='30,10,30,10', Default='30'}"
+        BackgroundColor="{OnPlatform iOS=Green, Android=AliceBlue, WinUI=DarkGrey}">
         
         <Label 
             Text="LayoutContentLabel"
             FontSize="{myFontSize:GlobalFontSize}"
+            TextColor="{x:Static Member=resources: SharedResources.FontColor}"
             VerticalOptions="Center"
             HorizontalOptions="{hOptions:GlobalHorizontalOptions}" />
         
