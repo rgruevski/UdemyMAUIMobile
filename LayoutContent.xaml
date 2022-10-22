@@ -3,16 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UdemyMAUIMobile.LayoutContent"
              xmlns:myFontSize="clr-namespace:UdemyMAUIMobile"
+             xmlns:hOptions="clr-namespace:UdemyMAUIMobile"
              Title="LayoutContent">
-    <VerticalStackLayout x:Name="VStackLayout" Padding="30, 20, 40, 30">
+    
+    <VerticalStackLayout 
+        x:Name="VStackLayout" 
+        Padding="{OnPlatform iOS='30,10,30,10', Default='30'}">
+        
         <Label 
-            Text=" - LayoutContent - "
+            Text="LayoutContentLabel"
             FontSize="{myFontSize:GlobalFontSize}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            VerticalOptions="Center"
+            HorizontalOptions="{hOptions:GlobalHorizontalOptions}" />
+        
         <Grid ColumnDefinitions="Auto, 30, Auto">
-            <Button Grid.Column="0" Text="0" WidthRequest="100"/>
-            <Button Grid.Column="2" Text="2" WidthRequest="100"/>
+            <Button Grid.Column="0" Text="LCbutton" WidthRequest="100"/>
+            <Button Grid.Column="2" Text="LCbutton2" WidthRequest="100"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
