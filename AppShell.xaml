@@ -4,11 +4,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:UdemyMAUIMobile"
-    Shell.FlyoutBehavior="Disabled">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:LayoutContent}"
-        Route="MainPage" />
-
+    Shell.FlyoutBehavior="Flyout">
+    <TabBar FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="Layouts">
+            <ShellContent
+                Title="Layouts"
+                ContentTemplate="{DataTemplate local:LayoutContent}"
+                Route="LayoutPage" />
+        </Tab>
+        <Tab Title="TestCoPage">
+            <ShellContent
+                Title="TestCoPage"
+                ContentTemplate="{DataTemplate local:TestContent}"
+                Route="TestContentPage" />
+        </Tab>
+        <Tab Title="TestProPage">
+            <ShellContent
+                Title="TestProPage"
+                ContentTemplate="{DataTemplate local:TestProgram}"
+                Route="TestProgramPage" />
+        </Tab>
+    </TabBar>
 </Shell>

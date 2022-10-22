@@ -15,7 +15,7 @@
         <Label 
             Text="LayoutContentLabel"
             FontSize="{myFontSize:GlobalFontSize}"
-            TextColor="{x:Static Member=resources: SharedResources.FontColor}"
+            TextColor="{x:Static Member=resources:SharedResources.ColorLight}"
             VerticalOptions="Center"
             HorizontalOptions="{hOptions:GlobalHorizontalOptions}" />
         
